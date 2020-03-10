@@ -1,0 +1,16 @@
+version: '3'
+services:
+    simple-service:
+        container_name: myapp
+        restart: always
+        build: .
+        ports:
+            - '3038:3038'
+
+    #        - mongo
+    #mongo:
+    #    container_name: myapp-mongo
+    #    image: 'mongo:4'
+    simple-redis:
+        container_name: simple-redis
+        image: 'redis:latest'
